@@ -5,8 +5,8 @@
 ## https://www.terraform.io/docs/providers/azurerm/r/resource_group.html
 ## uncomment the following block
 # resource "azurerm_resource_group" "example" {
-#   name     = "example"
-#   location = "France Central"
+#   name     = "formationterraformrg"
+#   location = "<LOCATION>"
 # }
 
 ################################################
@@ -20,14 +20,14 @@
 # resource "azurerm_virtual_network" "example" {
 #   name                = "vnet-example-fc-01"
 #   address_space       = ["10.0.0.0/16"]
-#   location            = azurerm_resource_group.example.location
-#   resource_group_name = azurerm_resource_group.example.name
+#   location            = "<LOCATION>"
+#   resource_group_name = "formationterraformrg"
 # }
 
 ## https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet
 # resource "azurerm_subnet" "internal" {
 #   name                 = "snet-example-fc-01"
-#   resource_group_name  = azurerm_resource_group.example.name
+#   resource_group_name  = "formationterraformrg"
 #   virtual_network_name = azurerm_virtual_network.example.name
 #   address_prefix       = "10.0.2.0/24"
 # }
@@ -35,8 +35,8 @@
 ## https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface
 # resource "azurerm_network_interface" "example" {
 #   name                = "vm-example-nic"
-#   location            = azurerm_resource_group.example.location
-#   resource_group_name = azurerm_resource_group.example.name
+#   location            = "<LOCATION>"
+#   resource_group_name = "formationterraformrg"
 
 #   ip_configuration {
 #     name                          = "testconfiguration1"
@@ -48,8 +48,8 @@
 # https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html
 # resource "azurerm_virtual_machine" "example" {
 #   name                  = "vm-example-vm"
-#   location              = azurerm_resource_group.example.location
-#   resource_group_name   = azurerm_resource_group.example.name
+#   location              = "<LOCATION>"
+#   resource_group_name   = "formationterraformrg"
 #   network_interface_ids = [azurerm_network_interface.example.id]
 #   vm_size               = "Standard_DS1_v2"
 
