@@ -4,10 +4,10 @@
 # more info: https://www.terraform.io/docs/backends/types/azurerm.html
 terraform {
   backend "azurerm" {
-    resource_group_name = "<RESOURCEGROUP>"
+    resource_group_name  = "<RESOURCEGROUP>"
     storage_account_name = "<ACCOUNTNAME>"
-    container_name = "<CONTAINERNAME>"
-    key = "<PROJECTNAME>.tfstate"
+    container_name       = "<CONTAINERNAME>"
+    key                  = "<PROJECTNAME>.tfstate"
   }
 }
 

@@ -4,6 +4,7 @@
 
 ## https://www.terraform.io/docs/providers/azurerm/r/resource_group.html
 ## uncomment the following block
+
 # resource "azurerm_resource_group" "example" {
 #   name     = "formationterraformrg"
 #   location = "<LOCATION>"
@@ -16,7 +17,7 @@
 ## uncomment the following block
 ## Example based on https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#storage_image_reference
 
-## https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network
+# # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network
 # resource "azurerm_virtual_network" "example" {
 #   name                = "vnet-example-fc-01"
 #   address_space       = ["10.0.0.0/16"]
@@ -24,15 +25,15 @@
 #   resource_group_name = "formationterraformrg"
 # }
 
-## https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet
+# # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet
 # resource "azurerm_subnet" "internal" {
 #   name                 = "snet-example-fc-01"
 #   resource_group_name  = "formationterraformrg"
 #   virtual_network_name = azurerm_virtual_network.example.name
-#   address_prefix       = "10.0.2.0/24"
+#   address_prefixes     = ["10.0.2.0/24"]
 # }
 
-## https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface
+# # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface
 # resource "azurerm_network_interface" "example" {
 #   name                = "vm-example-nic"
 #   location            = "<LOCATION>"
@@ -45,7 +46,7 @@
 #   }
 # }
 
-# https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html
+# # https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html
 # resource "azurerm_virtual_machine" "example" {
 #   name                  = "vm-example-vm"
 #   location              = "<LOCATION>"
